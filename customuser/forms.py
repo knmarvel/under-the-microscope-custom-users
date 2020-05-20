@@ -14,16 +14,22 @@ class AddCustomUser(forms.Form):
     username = forms.CharField(
         max_length=150
         )
-    display_name = forms.CharField(
-        max_length=150
-    )
     password = forms.CharField(
         widget=forms.PasswordInput()
+        )
+    display_name = forms.CharField(
+        max_length=150
         )
     first_name = forms.CharField(
         max_length=30
         )
     last_name = forms.CharField(
         max_length=150
+        )
+    homepage = forms.URLField(
+        widget=forms.URLInput()
+        )
+    age = forms.URLField(
+        widget=forms.NumberInput()
         )
     email = forms.EmailField()
