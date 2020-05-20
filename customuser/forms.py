@@ -27,9 +27,9 @@ class AddCustomUser(forms.Form):
         max_length=150
         )
     homepage = forms.URLField(
-        widget=forms.URLInput()
+        required=False
         )
-    age = forms.URLField(
+    age = forms.IntegerField(
         widget=forms.NumberInput()
         )
     email = forms.EmailField()
