@@ -51,7 +51,7 @@ def adduser_view(request):
                 email=data['email']
             )
             new_user = MyUser.objects.last()
-            new_user.set_password("")
+            new_user.set_password(raw_password=data['password'])
             new_user.save()
             login(request, new_user)
             return HttpResponseRedirect(
